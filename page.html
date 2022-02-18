@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+    <!--Sprite---------------------------->
+
+<svg style="display: none;">
+
+    <symbol id="facebook" viewBox="0 0 100 100">
+        <g>
+            <path d="m40.4 55.2c-.3 0-6.9 0-9.9 0-1.6 0-2.1-.6-2.1-2.1 0-4 
+                0-8.1 0-12.1 0-1.6.6-2.1 2.1-2.1h9.9c0-.3 0-6.1 0-8.8 0-4 .7-7.8 2.7-11.3
+                2.1-3.6 5.1-6 8.9-7.4 2.5-.9 5-1.3 7.7-1.3h9.8c1.4 0 2 .6 2 2v11.4c0 
+                1.4-.6 2-2 2-2.7 0-5.4 0-8.1.1-2.7 0-4.1 1.3-4.1 4.1-.1 3 0 5.9 0 9h11.6c1.6
+                0 2.2.6 2.2 2.2v12.1c0 1.6-.5 2.1-2.2 2.1-3.6 0-11.3 0-11.6 0v32.6c0 1.7-.5 
+                2.3-2.3 2.3-4.2 0-8.3 0-12.5 0-1.5 0-2.1-.6-2.1-2.1 0-10.5 0-32.4 0-32.7z" >
+            </path>
+        
+        </g>
+
+    </symbol>
+
+    <symbol id="twitter"  viewBox="0 0 100 100" >
+        <g>
+            <path d="m89.9 25.2c-3 1.3-6.1 2.2-9.4 2.6 3.4-2 6-5.2 7.2-9.1-3.2 1.9-6.7 
+                3.2-10.4 4-3-3.2-7.3-5.2-12-5.2-9.1 0-16.4 7.4-16.4 16.4 0 1.3.1 2.5.4 
+                3.7-13.6-.6-25.6-7.2-33.7-17.1-5.8 10.4.7 19 5 21.9-2.6 0-5.2-.8-7.4-2
+                0 8.1 5.7 14.8 13.1 16.3-1.6.5-5.2.8-7.4.3 2.1 6.5 8.2 11.3 15.3 
+                11.4-5.6 4.4-13.8 7.9-24.3 6.8 7.3 4.7 15.9 7.4 25.2 7.4 30.2 0 
+                46.6-25 46.6-46.6 0-.7 0-1.4-.1-2.1 3.4-2.5 6.2-5.4 8.3-8.7z" >
+            </path>
+        </g>
+    </symbol>
+
+    <symbol id="pinterest"  viewBox="0 0 97.672 97.672">
+        <g>
+            <path d="M51.125,0C24.469,0,11.029,19.11,11.029,35.047c0,9.649,3.653,18.232,11.487,
+            21.432c1.286,0.525,2.438,0.019,2.812-1.403   c0.258-0.985,0.871-3.468,
+            1.144-4.503c0.376-1.407,0.229-1.9-0.807-3.126c-2.259-2.665-3.703-6.115-3.703-11.002  
+             c0-14.178,10.608-26.87,27.624-26.87c15.064,0,23.342,9.206,23.342,21.5c0,16.176-7.159,
+             29.828-17.786,29.828   c-5.87,0-10.262-4.854-8.854-10.807c1.686-7.107,4.951-14.778,
+             4.951-19.907c0-4.592-2.463-8.423-7.565-8.423   c-6,0-10.819,6.207-10.819,14.521c0,
+             5.296,1.789,8.878,1.789,8.878s-6.141,26.015-7.215,30.571   c-2.145,9.072-0.322,
+             20.195-0.168,21.318c0.089,0.666,0.944,0.824,1.332,0.322c0.555-0.723,7.7-9.544,10.129-18.359  
+              c0.687-2.496,3.944-15.42,3.944-15.42c1.95,3.717,7.647,6.992,13.706,6.992c18.034,
+              0,30.271-16.441,30.271-38.45 C86.644,15.498,72.547,0,51.125,0z">
+            </path>
+        </g>
+    </symbol>
+
+    <symbol id="behance" viewBox="0 0 512 512">
+        <g>
+            <path d="M169.4,203c12.1,0,23.1,1,33.1,3.2c9.9,2.1,18.4,5.6,25.6,10.5c7.1,4.8,12.6,11.3,16.5,19.3 
+                s5.8,18,5.8,29.8c0,12.8-2.9,23.4-8.7,32c-5.8,8.5-14.4,15.5-25.9,20.9c15.6,4.5,
+                27.2,12.4,34.8,23.6c7.7,11.3,11.5,24.8,11.5,40.7  
+                c0,12.9-2.5,23.9-7.4,33.2c-5,9.4-11.7,17.1-20.1,23c-8.4,5.9-18,10.3-28.8,
+                13.2c-10.7,2.8-21.8,4.3-33.1,4.3H49.9V203H169.4z    
+                M162.2,305.4c9.9,0,18.1-2.3,24.6-7.1c6.4-4.7,9.5-12.4,
+                9.5-23.1c0-5.9-1-10.8-3.1-14.6c-2.2-3.8-5-6.7-8.6-8.8   
+                c-3.6-2.2-7.6-3.6-12.3-4.5c-4.6-0.9-9.4-1.3-14.4-1.3h-52.2v59.3h56.5V305.4z 
+                M165.3,413.4c5.5,0,10.7-0.5,15.7-1.6  
+                s9.4-2.8,13.2-5.4c3.7-2.5,6.8-5.8,9.1-10.1c2.3-4.3,3.3-9.8,
+                3.3-16.4c0-13.1-3.7-22.3-11-28c-7.3-5.6-17.1-8.3-29.1-8.3h-60.7   
+                v69.8L165.3,413.4L165.3,413.4z" >
+            </path>
+            <path d="M341.8,412.5c7.6,7.4,18.5,
+                11.1,32.6,11.1c10.2,0,19-2.6,26.3-7.7s11.8-10.6,13.5-16.3h44.4  
+                c-7.1,22.1-18,37.9-32.7,47.4c-14.6,9.5-32.4,14.3-53.2,14.3c-14.5,
+                0-27.5-2.3-39.2-7s-21.4-11.2-29.6-19.7  
+                c-8-8.6-14.2-18.7-18.6-30.6c-4.4-11.8-6.6-24.9-6.6-39.1c0-13.7,
+                2.3-26.6,6.8-38.4c4.6-11.9,10.9-22.2,19.2-30.8  
+                c8.3-8.7,18.2-15.5,29.8-20.5c11.5-5,24.2-7.5,
+                38.3-7.5c15.5,0,29.1,3,40.8,9.1c11.6,6,21.1,14.1,28.6,24.3   
+                c7.5,10.2,12.8,21.8,16.1,34.8c3.3,13,4.5,26.6,3.5,40.9H329.3C329.3,
+                391.4,334.2,405.2,341.8,412.5z M399.7,316.1  
+                c-6-6.6-16.1-10.2-28.5-10.2c-8.1,0-14.7,1.4-20.1,
+                4.1c-5.2,2.7-9.5,6.1-12.8,10.1c-3.3,4.1-5.5,8.4-6.8,
+                12.9s-2.1,8.5-2.3,12.1  
+                h82.1C410.2,332.3,405.8,322.8,399.7,
+                316.1z">
+            </path>            
+        </g>
+    </symbol>
+</svg>
+    
+    
+ <!--Header---------------------------------------------------------------->   
+    <header class="header" id="header"> 
+        <div class="container">
+            <div class="heder__inner">
+                <div class="heder__logo">
+                    <div class="logo">M<span style="color: #ff6600;">O</span>FIZ</div>
+                </div> 
+                <nav class="nav" id="nav"> 
+                   <a class="nav__link" href="#" data-scroll="#intro">Home</a>
+                   <a class="nav__link" href="#" data-scroll="#about">About</a>
+                   <a class="nav__link" href="#" data-scroll="#features">Service</a>
+                   <a class="nav__link" href="#" data-scroll="#team">Team</a>
+                   <a class="nav__link" href="#" data-scroll="#works">Work</a>
+                   <a class="nav__link" href="#" data-scroll="#blog">Blog</a>
+                   <a class="nav__link" href="#" data-scroll="#clients">Clients</a>
+                   <a class="nav__link" href="#" data-scroll="#contacts">Contacts</a>
+               </nav>
+
+               <button class="burger" type="button" id="navToggle">
+                   <span class="burger__item"></span>
+               </button>
+            </div>
+
+        </div>
+    </header>
+
+<!--Intro---------------------------------------------------------------->
+<div class="intro" id="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h1 class="intro__title">We don’t just build websites 
+            <p class="intro__subtitle">we build your business</p></h1>
+            <a class="button button--orange" href="#">Learn More</a>
+        </div>
+    </div>
+</div>  
+
+<!--About---------------------------------------------------------------->
+
+<div class="about" id = "about">
+    <div class="conteiner">
+        <div class="about__inner">
+            <div class="about__inf">
+                <h2 class="about__title">About Us</h2>
+                <p class="about__text">Enthusiastically morph vertical resources via scalable services.
+                    Uniquely expedite sticky internal or "organic" sources without an expanded array of scenarios. Uniquely build transparent solutions vis-a-vis magnetic thodologies. Energistically aggregate extensible results with volutionary metrics. 
+                    Collaboratively communicate terdependent experiences before.asdd Competently.</p>
+                <div class="buttom_works">
+                    <a class="button button--orange"  href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="about__img">
+                <img src="About/pictures.jpg" class="about__pictures" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+
+<!--Feature---------------------------------------------------------------->
+
+<div class="background__feature" id="features">
+    <div class="container">
+        <h2 class="features__title">OUR SERVICES</h2>
+        <div class="features">
+            <div class="features__item">
+                <img src="images/feature1.svg"  class="feature__img">
+                <div class="feature__info">
+                    <h4 class="feature__item__title">WEB DESIGN</h4>
+                    <p class="feature__item__text">Interactively pontificate integrated methodologies for resourcegrowstrategies. 
+                    Professionally maintain next-generation growth. </p>
+                </div>   
+            </div>
+            <div class="features__item">
+                <img src="images/feature2.svg"  class="feature__img">
+                <div class="feature__info">
+                    <h4 class="feature__item__title">E-MAIL MARKETING</h4>
+                    <p><div class="feature__item__text"> pontificate integrated methodologies for resourcegrowstrategies. 
+                        Professionally maintain next-generation growth.</div> </p>
+                </div>   
+            </div>
+            <div class="features__item">
+                <img src="images/feature3.svg"  class="feature__img">
+                <div class="feature__info">
+                    <h4 class="feature__item__title">GRAPHIC DESIGN</h4>
+                    <p class="feature__item__text">Interactively pontificate integrated methodologies for resourcegrowstrategies. 
+                    Professionally maintain next-generation growth. </p>
+                </div>   
+            </div>
+            <div class="features__item">
+                <img src="images/feature4.svg"  class="feature__img">
+                <div class="feature__info">
+                    <h4 class="feature__item__title">BRAND INDENTITY</h4>
+                    <p class="feature__item__text">Interactively pontificate integrated methodologies for resourcegrowstrategies. 
+                    Professionally maintain next-generation growth. </p>
+                </div>   
+            </div>
+            <div class="features__item">
+                <img src="images/feature5.svg"  class="feature__img">
+                <div class="feature__info">
+                    <h4 class="feature__item__title">UI/UX DESIGN</h4>
+                    <p class="feature__item__text">Interactively pontificate integrated methodologies for resourcegrowstrategies. 
+                    Professionally maintain next-generation growth. </p>
+                </div>   
+            </div>
+            <div class="features__item">
+                <img src="images/feature6.svg"  class="feature__img">
+                <div class="feature__info">
+                    <h4 class="feature__item__title">Quick Support</h4>
+                    <p class="feature__item__text">Interactively pontificate integrated methodologies for resourcegrowstrategies. 
+                    Professionally maintain next-generation growth. </p>
+                </div>   
+            </div>
+
+        </div>  
+    </div>
+</div>
+<!--Team(worker)---------------------------------------------------------------->
+
+<div class="team" id="team">
+    <div class="container">
+        <h2 class="team__title">Our Team</h2>   
+        
+        <div class="workers" id="team__slider">
+            
+            <div class="worker">
+                <div class="worker__img">
+                    <img src="Workers/Party_TomCruse.jpg" class="worker__photo" alt="">
+                    <div class="sheath__worker__photo">
+                        <div class="worker__links">
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#pinterest"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="worker__name">Tom Cruse</div>
+                <div class="worker__post">Founder</div>
+            </div>
+
+            <div class="worker">
+                <div class="worker__img">
+                    <img src="Workers/Party_SunnySmith.jpg" class="worker__photo" alt="">
+                    <div class="sheath__worker__photo">
+                        <div class="worker__links">
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#pinterest"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="worker__name">Sunny Smith</div>
+                <div class="worker__post">Developer</div>
+            </div>
+
+            <div class="worker">
+                <div class="worker__img">  
+                    <img src="Workers/Party_ShonSmith.jpg" class="worker__photo" alt="">
+                    <div class="sheath__worker__photo">
+                        <div class="worker__links">
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#pinterest"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="worker__name">Shon Smith</div>
+                <div class="worker__post">Designer</div>
+            </div>
+
+            <div class="worker">
+                <div class="worker__img">
+                    <img src="Workers/Party_TomCruse.jpg" class="worker__photo" alt="">
+                    <div class="sheath__worker__photo">
+                        <div class="worker__links">
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#pinterest"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="worker__name">Tom Cruse</div>
+                <div class="worker__post">Founder</div>
+            </div>
+
+            <div class="worker">
+                <div class="worker__img">
+                    <img src="Workers/Party_SunnySmith.jpg" class="worker__photo" alt="">
+                    <div class="sheath__worker__photo">
+                        <div class="worker__links">
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#pinterest"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="worker__name">Sunny Smith</div>
+                <div class="worker__post">Developer</div>
+            </div>
+
+            <div class="worker">
+                <div class="worker__img">  
+                    <img src="Workers/Party_ShonSmith.jpg" class="worker__photo" alt="">
+                    <div class="sheath__worker__photo">
+                        <div class="worker__links">
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#pinterest"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="worker__name">Shon Smith</div>
+                <div class="worker__post">Designer</div>
+            </div>
+
+            <div class="worker">
+                <div class="worker__img">
+                    <img src="Workers/Party_TomCruse.jpg" class="worker__photo" alt="">
+                    <div class="sheath__worker__photo">
+                        <div class="worker__links">
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#pinterest"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="worker__name">Tom Cruse</div>
+                <div class="worker__post">Founder</div>
+            </div>
+
+            <div class="worker">
+                <div class="worker__img">
+                    <img src="Workers/Party_SunnySmith.jpg" class="worker__photo" alt="">
+                    <div class="sheath__worker__photo">
+                        <div class="worker__links">
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#pinterest"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="worker__name">Sunny Smith</div>
+                <div class="worker__post">Developer</div>
+            </div>
+
+            <div class="worker">
+                <div class="worker__img">  
+                    <img src="Workers/Party_ShonSmith.jpg" class="worker__photo" alt="">
+                    <div class="sheath__worker__photo">
+                        <div class="worker__links">
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#pinterest"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="worker__name">Shon Smith</div>
+                <div class="worker__post">Designer</div>
+            </div>
+       
+        </div>
+
+        
+    
+    
+    </div>
+</div>
+
+<!--Works---------------------------------------------------------------->
+<div class="background__works" id="works">
+    <div class="container">
+        <h2 class="works__title">Our Works</h2>
+        <div class="works">
+            <img src="works/works-1.jpg" alt="" class="works__img">
+            <img src="works/works-2.jpg" alt="" class="works__img">
+            <img src="works/works-3.jpg" alt="" class="works__img">
+            <img src="works/works-4.jpg" alt="" class="works__img">
+            <img src="works/works-5.jpg" alt="" class="works__img">
+            <img src="works/works-6.jpg" alt="" class="works__img">
+            <img src="works/works-7.jpg" alt="" class="works__img">
+            <img src="works/works-8.jpg" alt="" class="works__img">
+            <img src="works/works-9.jpg" alt="" class="works__img">
+            
+        </div>
+        <div class="buttom_works">
+            <a class="button button--orange"  href="#">View all</a>
+        </div>
+        
+    </div>
+</div>
+<!--Blog---------------------------------------------------------------->
+<div class="blog" id="blog">
+    <div class="container">
+        <h2 class="blogs__title">Our Blog</h2>
+        <div class="blogs">
+            
+            <div class="blog__inner">
+                <div class="blog__img">
+                    <img src="Blogs/Blog-1.jpg" class="blog__photo" alt="">
+                </div>
+                <div class="blog__inner__topic">The Importance of Taking Risks</div>
+                <div class="blog__inner__text">nteractively pontificate integrated
+                    gies for resource grow strategies</div>
+                <div class="blog__inner__date">29/04/2017</div>
+            </div>
+
+            <div class="blog__inner">
+                <div class="blog__img">
+                    <img src="Blogs/Blog-1.jpg" class="blog__photo" alt="">
+                </div>
+                <div class="blog__inner__topic">The Importance of Taking Risks</div>
+                <div class="blog__inner__text">nteractively pontificate integrated
+                    gies for resource grow strategies</div>
+                <div class="blog__inner__date">29/04/2017</div>
+            </div>
+
+            <div class="blog__inner">
+                <div class="blog__img">
+                    <img src="Blogs/Blog-1.jpg" class="blog__photo" alt="">
+                </div>
+                <div class="blog__inner__topic">The Importance of Taking Risks</div>
+                <div class="blog__inner__text">nteractively pontificate integrated
+                    gies for resource grow strategies</div>
+                <div class="blog__inner__date">29/04/2017</div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!--Comments------------------------------------------------------------>
+
+<div class="comments" id="comments">
+    
+    <div class="slider__comments" id = "slider__comments">
+        
+        <div class="slider_item">
+            <div class="comment">
+                <div class="sheath_background__comments"> 
+                    <div class="container">
+                        <div class="commentator">
+                            <h3 class="commets__title">What Clients</h3>
+                            <h2 class="comments__subtitle">Say About Us</h2>
+                            <div class="comments__text">Objectively facilitate B2C metrics whereas intermandated customer service. 
+                                Phosfluorescently extend economically sound internal or "organic" sources whereas client-based t
+                            </div> 
+                            <img src="Comments/DevidJems.png"  class="сommentator__photo" alt="">  
+                            <div class="commentator__name">Devid Jems</div>  
+                            <div class="commentator__post">under/CEO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="slider_item">
+            <div class="comment">
+                <div class="sheath_background__comments"> 
+                    <div class="container">
+                        <div class="commentator">
+                            <h3 class="commets__title">What Clients</h3>
+                            <h2 class="comments__subtitle">Say About Us</h2>
+                            <div class="comments__text">Objectively facilitate B2C metrics whereas intermandated customer service. 
+                                Phosfluorescently extend economically sound internal or "organic" sources whereas client-based t
+                            </div> 
+                            <img src="Comments/DevidJems.png"  class="сommentator__photo" alt="">  
+                            <div class="commentator__name">Devid Jems</div>  
+                            <div class="commentator__post">under/CEO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>   
+
+
+      
+
+
+<!--Clients---------------------------------------------------------------->
+<div class="clients" id="clients">
+    <h2 class="clients__title">Our clients</h2>
+    <div class="clients__imgs">
+        <div class="client__img">
+            <img src="clients/client1.png" class="client__logo" alt="">
+        </div>
+        <div class="client__img">
+            <img src="clients/client2.jpg" class="client__logo" alt="">
+        </div>
+        <div class="client__img">
+            <img src="clients/client3.png" class="client__logo" alt="">
+        </div>
+        <div class="client__img">   
+        <img src="clients/client4.png" class="client__logo" alt="">
+        </div>
+        <div class="client__img">
+            <img src="clients/client5.jpg" class="client__logo" alt="">
+        </div>
+        <div class="client__img">
+        <img src="clients/client6.jpg" class="client__logo" alt="">
+        </div>
+    </div>
+</div>
+
+<!--Contacts---------------------------------------------------------------->
+
+<div class="contacts" id="contacts">
+    <div class="container">
+        <h2 class="contacts__title">Our Contacts</h2>
+        
+        <form class="form">
+            
+            <input class="form__input name" id="name" placeholder="Your Name:" >
+            <input class="form__input mail" id="mail" placeholder="Your Mail:" >
+            <input class="form__input phone" id="phone" placeholder="Your Phone:" >
+            <textarea class="form__input massage" id="massage" placeholder="Your Message:"></textarea>
+           
+        </form>
+
+        <a class="button button--orange button__massage" href="#">Send Massage</a>
+        
+    </div>
+</div>
+
+<!--Place---------------------------------------------------------------->
+<div class="place" id="place">
+    <div class="sheath__place"></div>
+</div>
+
+
+
+
+</body>
+
+
+<!--Footer---------------------------------------------------------------->
+<footer class="footer">
+    
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__logo">M<span style="color: #ff6600;">O</span>FIZ</div>
+            <div class="social">
+                <a href="" class="social__link">
+                    <svg class="social__icon social__icon--orange">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+                <a href="" class="social__link social__icon--orange">
+                    <svg class="social__icon">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a>
+                <a href="" class="social__link social__icon--orange">
+                    <svg class="social__icon">
+                        <use xlink:href="#pinterest"></use>
+                    </svg>
+                </a>
+                <a href="" class="social__link social__icon--orange">
+                    <svg class="social__icon">
+                        <use xlink:href="#behance"></use>
+                    </svg>
+                </a>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    
+    
+</footer>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</html>
